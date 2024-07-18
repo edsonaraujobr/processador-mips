@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\loinh\Documents\Processador vf\MIPS-VHDL\simulation\qsim
+vMIPS_VHDL
+Z1 !s100 mK2=n8lc768]9oC0Jd2g51
+Z2 I0S26>lnbVzPO4:YUFE;CE3
+Z3 V[Xh^E6IS68XgijzI]MnTn2
+Z4 dC:\Users\loinh\Documents\Processador vf\MIPS-VHDL\simulation\qsim
+Z5 w1721305440
+Z6 8MIPS_VHDL.vo
+Z7 FMIPS_VHDL.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|MIPS_VHDL.vo|
+Z10 o-work work -O0
+Z11 n@m@i@p@s_@v@h@d@l
+!i10b 1
+!s85 0
+Z12 !s108 1721305441.085000
+Z13 !s107 MIPS_VHDL.vo|
+!s101 -O0
+vMIPS_VHDL_vlg_check_tst
+!i10b 1
+Z14 !s100 ^oPA7Pm=EObZM9JiLQE[@0
+Z15 ITe67@GDd?D<@AnZE1NXok3
+Z16 V3C`Al:G_iecT>J;2M_iEA3
+R4
+Z17 w1721305439
+Z18 8MIPS_VHDL.vt
+Z19 FMIPS_VHDL.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z20 !s108 1721305441.172000
+Z21 !s107 MIPS_VHDL.vt|
+Z22 !s90 -work|work|MIPS_VHDL.vt|
+!s101 -O0
+R10
+Z23 n@m@i@p@s_@v@h@d@l_vlg_check_tst
+vMIPS_VHDL_vlg_sample_tst
+!i10b 1
+Z24 !s100 I6?PKlDYeTnCfXC_MQL7k2
+Z25 If9iHe_U;HaoBC@JP;NdCl2
+Z26 VERHoBkSj8C`la>E^c]b>=1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@m@i@p@s_@v@h@d@l_vlg_sample_tst
+vMIPS_VHDL_vlg_vec_tst
+!i10b 1
+!s100 I^2RijeDc0GlNkINm[d`K1
+IBoHkKUSdde4iJ`CZ7>hmN3
+Z28 VB59=?[_JgI0z[WE4G:H522
+R4
+R17
+R18
+R19
+Z29 L0 948
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@m@i@p@s_@v@h@d@l_vlg_vec_tst

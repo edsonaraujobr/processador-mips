@@ -1,0 +1,1115 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "07/18/2024 09:23:59"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    MIPS_VHDL
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module MIPS_VHDL_vlg_sample_tst(
+	a,
+	alu_ctrl,
+	b,
+	clk,
+	confirmar_valor_key2,
+	reset_key0,
+	start_key3,
+	sampler_tx
+);
+input [3:0] a;
+input [2:0] alu_ctrl;
+input [3:0] b;
+input  clk;
+input  confirmar_valor_key2;
+input  reset_key0;
+input  start_key3;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(a or alu_ctrl or b or clk or confirmar_valor_key2 or reset_key0 or start_key3)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module MIPS_VHDL_vlg_check_tst (
+	alu_result,
+	estado,
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	led_verde_g4,
+	led_verde_g5,
+	led_verde_g6,
+	led_verde_g7,
+	led_vermelho_r0,
+	primeiroBit,
+	quartoBit,
+	segundoBit,
+	terceiroBit,
+	sampler_rx
+);
+input [3:0] alu_result;
+input [2:0] estado;
+input [6:0] HEX0;
+input [6:0] HEX1;
+input [6:0] HEX2;
+input [6:0] HEX3;
+input  led_verde_g4;
+input  led_verde_g5;
+input  led_verde_g6;
+input  led_verde_g7;
+input  led_vermelho_r0;
+input  primeiroBit;
+input  quartoBit;
+input  segundoBit;
+input  terceiroBit;
+input sampler_rx;
+
+reg [3:0] alu_result_expected;
+reg [2:0] estado_expected;
+reg [6:0] HEX0_expected;
+reg [6:0] HEX1_expected;
+reg [6:0] HEX2_expected;
+reg [6:0] HEX3_expected;
+reg  led_verde_g4_expected;
+reg  led_verde_g5_expected;
+reg  led_verde_g6_expected;
+reg  led_verde_g7_expected;
+reg  led_vermelho_r0_expected;
+reg  primeiroBit_expected;
+reg  quartoBit_expected;
+reg  segundoBit_expected;
+reg  terceiroBit_expected;
+
+reg [3:0] alu_result_prev;
+reg [2:0] estado_prev;
+reg [6:0] HEX0_prev;
+reg [6:0] HEX1_prev;
+reg [6:0] HEX2_prev;
+reg [6:0] HEX3_prev;
+reg  led_verde_g4_prev;
+reg  led_verde_g5_prev;
+reg  led_verde_g6_prev;
+reg  led_verde_g7_prev;
+reg  led_vermelho_r0_prev;
+reg  primeiroBit_prev;
+reg  quartoBit_prev;
+reg  segundoBit_prev;
+reg  terceiroBit_prev;
+
+reg [3:0] alu_result_expected_prev;
+reg [2:0] estado_expected_prev;
+reg [6:0] HEX0_expected_prev;
+reg [6:0] HEX1_expected_prev;
+reg [6:0] HEX2_expected_prev;
+reg [6:0] HEX3_expected_prev;
+reg  primeiroBit_expected_prev;
+reg  quartoBit_expected_prev;
+reg  segundoBit_expected_prev;
+reg  terceiroBit_expected_prev;
+
+reg [3:0] last_alu_result_exp;
+reg [2:0] last_estado_exp;
+reg [6:0] last_HEX0_exp;
+reg [6:0] last_HEX1_exp;
+reg [6:0] last_HEX2_exp;
+reg [6:0] last_HEX3_exp;
+reg  last_primeiroBit_exp;
+reg  last_quartoBit_exp;
+reg  last_segundoBit_exp;
+reg  last_terceiroBit_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:15] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 15'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	alu_result_prev = alu_result;
+	estado_prev = estado;
+	HEX0_prev = HEX0;
+	HEX1_prev = HEX1;
+	HEX2_prev = HEX2;
+	HEX3_prev = HEX3;
+	led_verde_g4_prev = led_verde_g4;
+	led_verde_g5_prev = led_verde_g5;
+	led_verde_g6_prev = led_verde_g6;
+	led_verde_g7_prev = led_verde_g7;
+	led_vermelho_r0_prev = led_vermelho_r0;
+	primeiroBit_prev = primeiroBit;
+	quartoBit_prev = quartoBit;
+	segundoBit_prev = segundoBit;
+	terceiroBit_prev = terceiroBit;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	alu_result_expected_prev = alu_result_expected;
+	estado_expected_prev = estado_expected;
+	HEX0_expected_prev = HEX0_expected;
+	HEX1_expected_prev = HEX1_expected;
+	HEX2_expected_prev = HEX2_expected;
+	HEX3_expected_prev = HEX3_expected;
+	primeiroBit_expected_prev = primeiroBit_expected;
+	quartoBit_expected_prev = quartoBit_expected;
+	segundoBit_expected_prev = segundoBit_expected;
+	terceiroBit_expected_prev = terceiroBit_expected;
+end
+
+
+
+// expected primeiroBit
+initial
+begin
+	primeiroBit_expected = 1'bX;
+end 
+
+// expected segundoBit
+initial
+begin
+	segundoBit_expected = 1'bX;
+end 
+
+// expected terceiroBit
+initial
+begin
+	terceiroBit_expected = 1'bX;
+end 
+
+// expected quartoBit
+initial
+begin
+	quartoBit_expected = 1'bX;
+end 
+// expected estado[ 2 ]
+initial
+begin
+	estado_expected[2] = 1'bX;
+end 
+// expected estado[ 1 ]
+initial
+begin
+	estado_expected[1] = 1'bX;
+end 
+// expected estado[ 0 ]
+initial
+begin
+	estado_expected[0] = 1'bX;
+end 
+// expected alu_result[ 3 ]
+initial
+begin
+	alu_result_expected[3] = 1'bX;
+end 
+// expected alu_result[ 2 ]
+initial
+begin
+	alu_result_expected[2] = 1'bX;
+end 
+// expected alu_result[ 1 ]
+initial
+begin
+	alu_result_expected[1] = 1'bX;
+end 
+// expected alu_result[ 0 ]
+initial
+begin
+	alu_result_expected[0] = 1'bX;
+end 
+// expected HEX0[ 6 ]
+initial
+begin
+	HEX0_expected[6] = 1'bX;
+end 
+// expected HEX0[ 5 ]
+initial
+begin
+	HEX0_expected[5] = 1'bX;
+end 
+// expected HEX0[ 4 ]
+initial
+begin
+	HEX0_expected[4] = 1'bX;
+end 
+// expected HEX0[ 3 ]
+initial
+begin
+	HEX0_expected[3] = 1'bX;
+end 
+// expected HEX0[ 2 ]
+initial
+begin
+	HEX0_expected[2] = 1'bX;
+end 
+// expected HEX0[ 1 ]
+initial
+begin
+	HEX0_expected[1] = 1'bX;
+end 
+// expected HEX0[ 0 ]
+initial
+begin
+	HEX0_expected[0] = 1'bX;
+end 
+// expected HEX1[ 6 ]
+initial
+begin
+	HEX1_expected[6] = 1'bX;
+end 
+// expected HEX1[ 5 ]
+initial
+begin
+	HEX1_expected[5] = 1'bX;
+end 
+// expected HEX1[ 4 ]
+initial
+begin
+	HEX1_expected[4] = 1'bX;
+end 
+// expected HEX1[ 3 ]
+initial
+begin
+	HEX1_expected[3] = 1'bX;
+end 
+// expected HEX1[ 2 ]
+initial
+begin
+	HEX1_expected[2] = 1'bX;
+end 
+// expected HEX1[ 1 ]
+initial
+begin
+	HEX1_expected[1] = 1'bX;
+end 
+// expected HEX1[ 0 ]
+initial
+begin
+	HEX1_expected[0] = 1'bX;
+end 
+// expected HEX2[ 6 ]
+initial
+begin
+	HEX2_expected[6] = 1'bX;
+end 
+// expected HEX2[ 5 ]
+initial
+begin
+	HEX2_expected[5] = 1'bX;
+end 
+// expected HEX2[ 4 ]
+initial
+begin
+	HEX2_expected[4] = 1'bX;
+end 
+// expected HEX2[ 3 ]
+initial
+begin
+	HEX2_expected[3] = 1'bX;
+end 
+// expected HEX2[ 2 ]
+initial
+begin
+	HEX2_expected[2] = 1'bX;
+end 
+// expected HEX2[ 1 ]
+initial
+begin
+	HEX2_expected[1] = 1'bX;
+end 
+// expected HEX2[ 0 ]
+initial
+begin
+	HEX2_expected[0] = 1'bX;
+end 
+// expected HEX3[ 6 ]
+initial
+begin
+	HEX3_expected[6] = 1'bX;
+end 
+// expected HEX3[ 5 ]
+initial
+begin
+	HEX3_expected[5] = 1'bX;
+end 
+// expected HEX3[ 4 ]
+initial
+begin
+	HEX3_expected[4] = 1'bX;
+end 
+// expected HEX3[ 3 ]
+initial
+begin
+	HEX3_expected[3] = 1'bX;
+end 
+// expected HEX3[ 2 ]
+initial
+begin
+	HEX3_expected[2] = 1'bX;
+end 
+// expected HEX3[ 1 ]
+initial
+begin
+	HEX3_expected[1] = 1'bX;
+end 
+// expected HEX3[ 0 ]
+initial
+begin
+	HEX3_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(alu_result_expected or alu_result or estado_expected or estado or HEX0_expected or HEX0 or HEX1_expected or HEX1 or HEX2_expected or HEX2 or HEX3_expected or HEX3 or led_verde_g4_expected or led_verde_g4 or led_verde_g5_expected or led_verde_g5 or led_verde_g6_expected or led_verde_g6 or led_verde_g7_expected or led_verde_g7 or led_vermelho_r0_expected or led_vermelho_r0 or primeiroBit_expected or primeiroBit or quartoBit_expected or quartoBit or segundoBit_expected or segundoBit or terceiroBit_expected or terceiroBit)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected alu_result = %b | expected estado = %b | expected HEX0 = %b | expected HEX1 = %b | expected HEX2 = %b | expected HEX3 = %b | expected led_verde_g4 = %b | expected led_verde_g5 = %b | expected led_verde_g6 = %b | expected led_verde_g7 = %b | expected led_vermelho_r0 = %b | expected primeiroBit = %b | expected quartoBit = %b | expected segundoBit = %b | expected terceiroBit = %b | ",alu_result_expected_prev,estado_expected_prev,HEX0_expected_prev,HEX1_expected_prev,HEX2_expected_prev,HEX3_expected_prev,led_verde_g4_expected_prev,led_verde_g5_expected_prev,led_verde_g6_expected_prev,led_verde_g7_expected_prev,led_vermelho_r0_expected_prev,primeiroBit_expected_prev,quartoBit_expected_prev,segundoBit_expected_prev,terceiroBit_expected_prev);
+	$display("| real alu_result = %b | real estado = %b | real HEX0 = %b | real HEX1 = %b | real HEX2 = %b | real HEX3 = %b | real led_verde_g4 = %b | real led_verde_g5 = %b | real led_verde_g6 = %b | real led_verde_g7 = %b | real led_vermelho_r0 = %b | real primeiroBit = %b | real quartoBit = %b | real segundoBit = %b | real terceiroBit = %b | ",alu_result_prev,estado_prev,HEX0_prev,HEX1_prev,HEX2_prev,HEX3_prev,led_verde_g4_prev,led_verde_g5_prev,led_verde_g6_prev,led_verde_g7_prev,led_vermelho_r0_prev,primeiroBit_prev,quartoBit_prev,segundoBit_prev,terceiroBit_prev);
+`endif
+	if (
+		( alu_result_expected_prev[0] !== 1'bx ) && ( alu_result_prev[0] !== alu_result_expected_prev[0] )
+		&& ((alu_result_expected_prev[0] !== last_alu_result_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alu_result[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alu_result_expected_prev);
+		$display ("     Real value = %b", alu_result_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alu_result_exp[0] = alu_result_expected_prev[0];
+	end
+	if (
+		( alu_result_expected_prev[1] !== 1'bx ) && ( alu_result_prev[1] !== alu_result_expected_prev[1] )
+		&& ((alu_result_expected_prev[1] !== last_alu_result_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alu_result[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alu_result_expected_prev);
+		$display ("     Real value = %b", alu_result_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alu_result_exp[1] = alu_result_expected_prev[1];
+	end
+	if (
+		( alu_result_expected_prev[2] !== 1'bx ) && ( alu_result_prev[2] !== alu_result_expected_prev[2] )
+		&& ((alu_result_expected_prev[2] !== last_alu_result_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alu_result[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alu_result_expected_prev);
+		$display ("     Real value = %b", alu_result_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alu_result_exp[2] = alu_result_expected_prev[2];
+	end
+	if (
+		( alu_result_expected_prev[3] !== 1'bx ) && ( alu_result_prev[3] !== alu_result_expected_prev[3] )
+		&& ((alu_result_expected_prev[3] !== last_alu_result_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port alu_result[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", alu_result_expected_prev);
+		$display ("     Real value = %b", alu_result_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_alu_result_exp[3] = alu_result_expected_prev[3];
+	end
+	if (
+		( estado_expected_prev[0] !== 1'bx ) && ( estado_prev[0] !== estado_expected_prev[0] )
+		&& ((estado_expected_prev[0] !== last_estado_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port estado[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", estado_expected_prev);
+		$display ("     Real value = %b", estado_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_estado_exp[0] = estado_expected_prev[0];
+	end
+	if (
+		( estado_expected_prev[1] !== 1'bx ) && ( estado_prev[1] !== estado_expected_prev[1] )
+		&& ((estado_expected_prev[1] !== last_estado_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port estado[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", estado_expected_prev);
+		$display ("     Real value = %b", estado_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_estado_exp[1] = estado_expected_prev[1];
+	end
+	if (
+		( estado_expected_prev[2] !== 1'bx ) && ( estado_prev[2] !== estado_expected_prev[2] )
+		&& ((estado_expected_prev[2] !== last_estado_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port estado[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", estado_expected_prev);
+		$display ("     Real value = %b", estado_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_estado_exp[2] = estado_expected_prev[2];
+	end
+	if (
+		( HEX0_expected_prev[0] !== 1'bx ) && ( HEX0_prev[0] !== HEX0_expected_prev[0] )
+		&& ((HEX0_expected_prev[0] !== last_HEX0_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[0] = HEX0_expected_prev[0];
+	end
+	if (
+		( HEX0_expected_prev[1] !== 1'bx ) && ( HEX0_prev[1] !== HEX0_expected_prev[1] )
+		&& ((HEX0_expected_prev[1] !== last_HEX0_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[1] = HEX0_expected_prev[1];
+	end
+	if (
+		( HEX0_expected_prev[2] !== 1'bx ) && ( HEX0_prev[2] !== HEX0_expected_prev[2] )
+		&& ((HEX0_expected_prev[2] !== last_HEX0_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[2] = HEX0_expected_prev[2];
+	end
+	if (
+		( HEX0_expected_prev[3] !== 1'bx ) && ( HEX0_prev[3] !== HEX0_expected_prev[3] )
+		&& ((HEX0_expected_prev[3] !== last_HEX0_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[3] = HEX0_expected_prev[3];
+	end
+	if (
+		( HEX0_expected_prev[4] !== 1'bx ) && ( HEX0_prev[4] !== HEX0_expected_prev[4] )
+		&& ((HEX0_expected_prev[4] !== last_HEX0_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[4] = HEX0_expected_prev[4];
+	end
+	if (
+		( HEX0_expected_prev[5] !== 1'bx ) && ( HEX0_prev[5] !== HEX0_expected_prev[5] )
+		&& ((HEX0_expected_prev[5] !== last_HEX0_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[5] = HEX0_expected_prev[5];
+	end
+	if (
+		( HEX0_expected_prev[6] !== 1'bx ) && ( HEX0_prev[6] !== HEX0_expected_prev[6] )
+		&& ((HEX0_expected_prev[6] !== last_HEX0_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX0[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX0_expected_prev);
+		$display ("     Real value = %b", HEX0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_HEX0_exp[6] = HEX0_expected_prev[6];
+	end
+	if (
+		( HEX1_expected_prev[0] !== 1'bx ) && ( HEX1_prev[0] !== HEX1_expected_prev[0] )
+		&& ((HEX1_expected_prev[0] !== last_HEX1_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[0] = HEX1_expected_prev[0];
+	end
+	if (
+		( HEX1_expected_prev[1] !== 1'bx ) && ( HEX1_prev[1] !== HEX1_expected_prev[1] )
+		&& ((HEX1_expected_prev[1] !== last_HEX1_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[1] = HEX1_expected_prev[1];
+	end
+	if (
+		( HEX1_expected_prev[2] !== 1'bx ) && ( HEX1_prev[2] !== HEX1_expected_prev[2] )
+		&& ((HEX1_expected_prev[2] !== last_HEX1_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[2] = HEX1_expected_prev[2];
+	end
+	if (
+		( HEX1_expected_prev[3] !== 1'bx ) && ( HEX1_prev[3] !== HEX1_expected_prev[3] )
+		&& ((HEX1_expected_prev[3] !== last_HEX1_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[3] = HEX1_expected_prev[3];
+	end
+	if (
+		( HEX1_expected_prev[4] !== 1'bx ) && ( HEX1_prev[4] !== HEX1_expected_prev[4] )
+		&& ((HEX1_expected_prev[4] !== last_HEX1_exp[4]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[4] = HEX1_expected_prev[4];
+	end
+	if (
+		( HEX1_expected_prev[5] !== 1'bx ) && ( HEX1_prev[5] !== HEX1_expected_prev[5] )
+		&& ((HEX1_expected_prev[5] !== last_HEX1_exp[5]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[5] = HEX1_expected_prev[5];
+	end
+	if (
+		( HEX1_expected_prev[6] !== 1'bx ) && ( HEX1_prev[6] !== HEX1_expected_prev[6] )
+		&& ((HEX1_expected_prev[6] !== last_HEX1_exp[6]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX1[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX1_expected_prev);
+		$display ("     Real value = %b", HEX1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_HEX1_exp[6] = HEX1_expected_prev[6];
+	end
+	if (
+		( HEX2_expected_prev[0] !== 1'bx ) && ( HEX2_prev[0] !== HEX2_expected_prev[0] )
+		&& ((HEX2_expected_prev[0] !== last_HEX2_exp[0]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[0] = HEX2_expected_prev[0];
+	end
+	if (
+		( HEX2_expected_prev[1] !== 1'bx ) && ( HEX2_prev[1] !== HEX2_expected_prev[1] )
+		&& ((HEX2_expected_prev[1] !== last_HEX2_exp[1]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[1] = HEX2_expected_prev[1];
+	end
+	if (
+		( HEX2_expected_prev[2] !== 1'bx ) && ( HEX2_prev[2] !== HEX2_expected_prev[2] )
+		&& ((HEX2_expected_prev[2] !== last_HEX2_exp[2]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[2] = HEX2_expected_prev[2];
+	end
+	if (
+		( HEX2_expected_prev[3] !== 1'bx ) && ( HEX2_prev[3] !== HEX2_expected_prev[3] )
+		&& ((HEX2_expected_prev[3] !== last_HEX2_exp[3]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[3] = HEX2_expected_prev[3];
+	end
+	if (
+		( HEX2_expected_prev[4] !== 1'bx ) && ( HEX2_prev[4] !== HEX2_expected_prev[4] )
+		&& ((HEX2_expected_prev[4] !== last_HEX2_exp[4]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[4] = HEX2_expected_prev[4];
+	end
+	if (
+		( HEX2_expected_prev[5] !== 1'bx ) && ( HEX2_prev[5] !== HEX2_expected_prev[5] )
+		&& ((HEX2_expected_prev[5] !== last_HEX2_exp[5]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[5] = HEX2_expected_prev[5];
+	end
+	if (
+		( HEX2_expected_prev[6] !== 1'bx ) && ( HEX2_prev[6] !== HEX2_expected_prev[6] )
+		&& ((HEX2_expected_prev[6] !== last_HEX2_exp[6]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX2[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX2_expected_prev);
+		$display ("     Real value = %b", HEX2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_HEX2_exp[6] = HEX2_expected_prev[6];
+	end
+	if (
+		( HEX3_expected_prev[0] !== 1'bx ) && ( HEX3_prev[0] !== HEX3_expected_prev[0] )
+		&& ((HEX3_expected_prev[0] !== last_HEX3_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[0] = HEX3_expected_prev[0];
+	end
+	if (
+		( HEX3_expected_prev[1] !== 1'bx ) && ( HEX3_prev[1] !== HEX3_expected_prev[1] )
+		&& ((HEX3_expected_prev[1] !== last_HEX3_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[1] = HEX3_expected_prev[1];
+	end
+	if (
+		( HEX3_expected_prev[2] !== 1'bx ) && ( HEX3_prev[2] !== HEX3_expected_prev[2] )
+		&& ((HEX3_expected_prev[2] !== last_HEX3_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[2] = HEX3_expected_prev[2];
+	end
+	if (
+		( HEX3_expected_prev[3] !== 1'bx ) && ( HEX3_prev[3] !== HEX3_expected_prev[3] )
+		&& ((HEX3_expected_prev[3] !== last_HEX3_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[3] = HEX3_expected_prev[3];
+	end
+	if (
+		( HEX3_expected_prev[4] !== 1'bx ) && ( HEX3_prev[4] !== HEX3_expected_prev[4] )
+		&& ((HEX3_expected_prev[4] !== last_HEX3_exp[4]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[4] = HEX3_expected_prev[4];
+	end
+	if (
+		( HEX3_expected_prev[5] !== 1'bx ) && ( HEX3_prev[5] !== HEX3_expected_prev[5] )
+		&& ((HEX3_expected_prev[5] !== last_HEX3_exp[5]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[5] = HEX3_expected_prev[5];
+	end
+	if (
+		( HEX3_expected_prev[6] !== 1'bx ) && ( HEX3_prev[6] !== HEX3_expected_prev[6] )
+		&& ((HEX3_expected_prev[6] !== last_HEX3_exp[6]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port HEX3[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", HEX3_expected_prev);
+		$display ("     Real value = %b", HEX3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_HEX3_exp[6] = HEX3_expected_prev[6];
+	end
+	if (
+		( primeiroBit_expected_prev !== 1'bx ) && ( primeiroBit_prev !== primeiroBit_expected_prev )
+		&& ((primeiroBit_expected_prev !== last_primeiroBit_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port primeiroBit :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", primeiroBit_expected_prev);
+		$display ("     Real value = %b", primeiroBit_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_primeiroBit_exp = primeiroBit_expected_prev;
+	end
+	if (
+		( quartoBit_expected_prev !== 1'bx ) && ( quartoBit_prev !== quartoBit_expected_prev )
+		&& ((quartoBit_expected_prev !== last_quartoBit_exp) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port quartoBit :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", quartoBit_expected_prev);
+		$display ("     Real value = %b", quartoBit_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_quartoBit_exp = quartoBit_expected_prev;
+	end
+	if (
+		( segundoBit_expected_prev !== 1'bx ) && ( segundoBit_prev !== segundoBit_expected_prev )
+		&& ((segundoBit_expected_prev !== last_segundoBit_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port segundoBit :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", segundoBit_expected_prev);
+		$display ("     Real value = %b", segundoBit_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_segundoBit_exp = segundoBit_expected_prev;
+	end
+	if (
+		( terceiroBit_expected_prev !== 1'bx ) && ( terceiroBit_prev !== terceiroBit_expected_prev )
+		&& ((terceiroBit_expected_prev !== last_terceiroBit_exp) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port terceiroBit :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", terceiroBit_expected_prev);
+		$display ("     Real value = %b", terceiroBit_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_terceiroBit_exp = terceiroBit_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module MIPS_VHDL_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [3:0] a;
+reg [2:0] alu_ctrl;
+reg [3:0] b;
+reg clk;
+reg confirmar_valor_key2;
+reg reset_key0;
+reg start_key3;
+// wires                                               
+wire [3:0] alu_result;
+wire [2:0] estado;
+wire [6:0] HEX0;
+wire [6:0] HEX1;
+wire [6:0] HEX2;
+wire [6:0] HEX3;
+wire led_verde_g4;
+wire led_verde_g5;
+wire led_verde_g6;
+wire led_verde_g7;
+wire led_vermelho_r0;
+wire primeiroBit;
+wire quartoBit;
+wire segundoBit;
+wire terceiroBit;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+MIPS_VHDL i1 (
+// port map - connection between master ports and signals/registers   
+	.a(a),
+	.alu_ctrl(alu_ctrl),
+	.alu_result(alu_result),
+	.b(b),
+	.clk(clk),
+	.confirmar_valor_key2(confirmar_valor_key2),
+	.estado(estado),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.led_verde_g4(led_verde_g4),
+	.led_verde_g5(led_verde_g5),
+	.led_verde_g6(led_verde_g6),
+	.led_verde_g7(led_verde_g7),
+	.led_vermelho_r0(led_vermelho_r0),
+	.primeiroBit(primeiroBit),
+	.quartoBit(quartoBit),
+	.reset_key0(reset_key0),
+	.segundoBit(segundoBit),
+	.start_key3(start_key3),
+	.terceiroBit(terceiroBit)
+);
+// a[ 3 ]
+initial
+begin
+	a[3] = 1'b0;
+end 
+// a[ 2 ]
+initial
+begin
+	a[2] = 1'b0;
+end 
+// a[ 1 ]
+initial
+begin
+	a[1] = 1'b1;
+end 
+// a[ 0 ]
+initial
+begin
+	a[0] = 1'b0;
+end 
+// b[ 3 ]
+initial
+begin
+	b[3] = 1'b0;
+end 
+// b[ 2 ]
+initial
+begin
+	b[2] = 1'b0;
+end 
+// b[ 1 ]
+initial
+begin
+	b[1] = 1'b0;
+end 
+// b[ 0 ]
+initial
+begin
+	b[0] = 1'b1;
+end 
+// alu_ctrl[ 2 ]
+initial
+begin
+	alu_ctrl[2] = 1'b0;
+end 
+// alu_ctrl[ 1 ]
+initial
+begin
+	alu_ctrl[1] = 1'b0;
+end 
+// alu_ctrl[ 0 ]
+initial
+begin
+	alu_ctrl[0] = 1'b0;
+end 
+
+// start_key3
+initial
+begin
+	start_key3 = 1'b0;
+end 
+
+// reset_key0
+initial
+begin
+	reset_key0 = 1'b1;
+end 
+
+// confirmar_valor_key2
+initial
+begin
+	confirmar_valor_key2 = 1'b0;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+
+MIPS_VHDL_vlg_sample_tst tb_sample (
+	.a(a),
+	.alu_ctrl(alu_ctrl),
+	.b(b),
+	.clk(clk),
+	.confirmar_valor_key2(confirmar_valor_key2),
+	.reset_key0(reset_key0),
+	.start_key3(start_key3),
+	.sampler_tx(sampler)
+);
+
+MIPS_VHDL_vlg_check_tst tb_out(
+	.alu_result(alu_result),
+	.estado(estado),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.HEX2(HEX2),
+	.HEX3(HEX3),
+	.led_verde_g4(led_verde_g4),
+	.led_verde_g5(led_verde_g5),
+	.led_verde_g6(led_verde_g6),
+	.led_verde_g7(led_verde_g7),
+	.led_vermelho_r0(led_vermelho_r0),
+	.primeiroBit(primeiroBit),
+	.quartoBit(quartoBit),
+	.segundoBit(segundoBit),
+	.terceiroBit(terceiroBit),
+	.sampler_rx(sampler)
+);
+endmodule
+

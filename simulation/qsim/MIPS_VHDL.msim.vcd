@@ -1,0 +1,947 @@
+$comment
+	File created using the following command:
+		vcd file MIPS_VHDL.msim.vcd -direction
+$end
+$date
+	Thu Jul 18 09:24:01 2024
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module MIPS_VHDL_vlg_vec_tst $end
+$var reg 4 ! a [3:0] $end
+$var reg 3 " alu_ctrl [2:0] $end
+$var reg 4 # b [3:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % confirmar_valor_key2 $end
+$var reg 1 & reset_key0 $end
+$var reg 1 ' start_key3 $end
+$var wire 1 ( alu_result [3] $end
+$var wire 1 ) alu_result [2] $end
+$var wire 1 * alu_result [1] $end
+$var wire 1 + alu_result [0] $end
+$var wire 1 , estado [2] $end
+$var wire 1 - estado [1] $end
+$var wire 1 . estado [0] $end
+$var wire 1 / HEX0 [6] $end
+$var wire 1 0 HEX0 [5] $end
+$var wire 1 1 HEX0 [4] $end
+$var wire 1 2 HEX0 [3] $end
+$var wire 1 3 HEX0 [2] $end
+$var wire 1 4 HEX0 [1] $end
+$var wire 1 5 HEX0 [0] $end
+$var wire 1 6 HEX1 [6] $end
+$var wire 1 7 HEX1 [5] $end
+$var wire 1 8 HEX1 [4] $end
+$var wire 1 9 HEX1 [3] $end
+$var wire 1 : HEX1 [2] $end
+$var wire 1 ; HEX1 [1] $end
+$var wire 1 < HEX1 [0] $end
+$var wire 1 = HEX2 [6] $end
+$var wire 1 > HEX2 [5] $end
+$var wire 1 ? HEX2 [4] $end
+$var wire 1 @ HEX2 [3] $end
+$var wire 1 A HEX2 [2] $end
+$var wire 1 B HEX2 [1] $end
+$var wire 1 C HEX2 [0] $end
+$var wire 1 D HEX3 [6] $end
+$var wire 1 E HEX3 [5] $end
+$var wire 1 F HEX3 [4] $end
+$var wire 1 G HEX3 [3] $end
+$var wire 1 H HEX3 [2] $end
+$var wire 1 I HEX3 [1] $end
+$var wire 1 J HEX3 [0] $end
+$var wire 1 K led_verde_g4 $end
+$var wire 1 L led_verde_g5 $end
+$var wire 1 M led_verde_g6 $end
+$var wire 1 N led_verde_g7 $end
+$var wire 1 O led_vermelho_r0 $end
+$var wire 1 P primeiroBit $end
+$var wire 1 Q quartoBit $end
+$var wire 1 R segundoBit $end
+$var wire 1 S terceiroBit $end
+$var wire 1 T sampler $end
+$scope module i1 $end
+$var wire 1 U gnd $end
+$var wire 1 V vcc $end
+$var wire 1 W unknown $end
+$var tri1 1 X devclrn $end
+$var tri1 1 Y devpor $end
+$var tri1 1 Z devoe $end
+$var wire 1 [ proximo_estado[0]~3_combout $end
+$var wire 1 \ proximo_estado[0]~4_combout $end
+$var wire 1 ] confirmar_valor_key2~combout $end
+$var wire 1 ^ clk~combout $end
+$var wire 1 _ clk~clkctrl_outclk $end
+$var wire 1 ` primeiroBit~0_wirecell_combout $end
+$var wire 1 a reset_key0~combout $end
+$var wire 1 b Mux9~0_combout $end
+$var wire 1 c start_key3~combout $end
+$var wire 1 d proximo_estado[1]~6_combout $end
+$var wire 1 e proximo_estado[1]~7_combout $end
+$var wire 1 f proximo_estado~1_combout $end
+$var wire 1 g estado_atual[1]~feeder_combout $end
+$var wire 1 h primeiroBit~0_combout $end
+$var wire 1 i proximo_estado[0]~5_combout $end
+$var wire 1 j proximo_estado~0_combout $end
+$var wire 1 k Mux8~0_combout $end
+$var wire 1 l proximo_estado~2_combout $end
+$var wire 1 m estado_atual[2]~feeder_combout $end
+$var wire 1 n led_verde_g7~0_combout $end
+$var wire 1 o led_verde_g7~reg0_regout $end
+$var wire 1 p Mux5~0_combout $end
+$var wire 1 q led_verde_g6~reg0_regout $end
+$var wire 1 r Mux6~0_combout $end
+$var wire 1 s led_verde_g5~reg0_regout $end
+$var wire 1 t estado[2]~reg0feeder_combout $end
+$var wire 1 u estado[2]~reg0_regout $end
+$var wire 1 v led_vermelho_r0~reg0_regout $end
+$var wire 1 w primeiroBit~1_combout $end
+$var wire 1 x primeiroBit~2_combout $end
+$var wire 1 y Mux11~0_combout $end
+$var wire 1 z Mux11~1_combout $end
+$var wire 1 { primeiroBit~3_combout $end
+$var wire 1 | primeiroBit~reg0_regout $end
+$var wire 1 } Mux12~0_combout $end
+$var wire 1 ~ Mux12~1_combout $end
+$var wire 1 !! segundoBit~reg0_regout $end
+$var wire 1 "! alu|Mux2~1_combout $end
+$var wire 1 #! alu|Add0~5_combout $end
+$var wire 1 $! alu|Add0~0_combout $end
+$var wire 1 %! alu|Add0~2_cout $end
+$var wire 1 &! alu|Add0~4 $end
+$var wire 1 '! alu|Add0~6_combout $end
+$var wire 1 (! alu|Mux2~2_combout $end
+$var wire 1 )! Mux13~0_combout $end
+$var wire 1 *! Mux13~1_combout $end
+$var wire 1 +! terceiroBit~reg0_regout $end
+$var wire 1 ,! quartoBit~0_combout $end
+$var wire 1 -! quartoBit~1_combout $end
+$var wire 1 .! quartoBit~2_combout $end
+$var wire 1 /! quartoBit~reg0_regout $end
+$var wire 1 0! alu|Mux3~4_combout $end
+$var wire 1 1! alu|Mux3~5_combout $end
+$var wire 1 2! alu|Mux3~0_combout $end
+$var wire 1 3! alu|Mux3~2_combout $end
+$var wire 1 4! alu|Mux3~1_combout $end
+$var wire 1 5! alu|Mux3~3_combout $end
+$var wire 1 6! alu|Add0~3_combout $end
+$var wire 1 7! alu|Mux3~6_combout $end
+$var wire 1 8! alu|Mux2~0_combout $end
+$var wire 1 9! alu|Mux1~0_combout $end
+$var wire 1 :! alu|Add0~8_combout $end
+$var wire 1 ;! alu|Add0~7 $end
+$var wire 1 <! alu|Add0~9_combout $end
+$var wire 1 =! alu|Mux1~1_combout $end
+$var wire 1 >! alu|Add0~11_combout $end
+$var wire 1 ?! alu|Add0~10 $end
+$var wire 1 @! alu|Add0~12_combout $end
+$var wire 1 A! alu|Mux0~0_combout $end
+$var wire 1 B! alu|Mux0~1_combout $end
+$var wire 1 C! Mux2~0_combout $end
+$var wire 1 D! estado[0]~reg0_regout $end
+$var wire 1 E! estado[1]~reg0feeder_combout $end
+$var wire 1 F! estado[1]~reg0_regout $end
+$var wire 1 G! proximo_estado [2] $end
+$var wire 1 H! proximo_estado [1] $end
+$var wire 1 I! proximo_estado [0] $end
+$var wire 1 J! estado_atual [2] $end
+$var wire 1 K! estado_atual [1] $end
+$var wire 1 L! estado_atual [0] $end
+$var wire 1 M! b~combout [3] $end
+$var wire 1 N! b~combout [2] $end
+$var wire 1 O! b~combout [1] $end
+$var wire 1 P! b~combout [0] $end
+$var wire 1 Q! alu_ctrl~combout [2] $end
+$var wire 1 R! alu_ctrl~combout [1] $end
+$var wire 1 S! alu_ctrl~combout [0] $end
+$var wire 1 T! a~combout [3] $end
+$var wire 1 U! a~combout [2] $end
+$var wire 1 V! a~combout [1] $end
+$var wire 1 W! a~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 !
+b0 "
+b1 #
+0$
+0%
+1&
+0'
+1+
+1*
+0)
+0(
+0.
+0-
+0,
+15
+14
+13
+12
+11
+10
+0/
+1<
+1;
+1:
+19
+18
+17
+06
+1C
+1B
+1A
+1@
+1?
+1>
+0=
+1J
+1I
+1H
+1G
+1F
+1E
+0D
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+xT
+0U
+1V
+xW
+1X
+1Y
+1Z
+0[
+0\
+0]
+0^
+0_
+0`
+1a
+0b
+0c
+1d
+1e
+0f
+0g
+1h
+1i
+0j
+0k
+0l
+0m
+1n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+1#!
+0$!
+0%!
+1&!
+1'!
+1(!
+1)!
+1*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+16!
+17!
+18!
+09!
+1:!
+0;!
+0<!
+0=!
+1>!
+1?!
+0@!
+0A!
+0B!
+0C!
+0D!
+0E!
+0F!
+0I!
+0H!
+0G!
+0L!
+0K!
+0J!
+1P!
+0O!
+0N!
+0M!
+0S!
+0R!
+0Q!
+0W!
+1V!
+0U!
+0T!
+$end
+#10000
+1$
+1^
+1_
+0T
+1v
+1I!
+1j
+1O
+#20000
+0$
+0^
+0_
+1T
+#30000
+1$
+1^
+1_
+0T
+1L!
+1C!
+1{
+0h
+1b
+1[
+1`
+1\
+0i
+#40000
+0$
+0^
+0_
+1T
+#50000
+1$
+1^
+1_
+0T
+1D!
+1+!
+0v
+1o
+0I!
+1H!
+0j
+1f
+1.
+1S
+0O
+1N
+0<
+09
+08
+07
+1g
+#60000
+0$
+0^
+0_
+1T
+#70000
+1$
+1^
+1_
+0T
+0L!
+1K!
+0C!
+1,!
+0[
+1x
+1p
+1-!
+0\
+1E!
+0*!
+0)!
+1.!
+1i
+#80000
+0$
+0^
+0_
+1T
+#90000
+1$
+1^
+1_
+0T
+1F!
+0D!
+1/!
+0+!
+1q
+1I!
+1j
+1-
+0.
+1Q
+0S
+1M
+05
+02
+01
+00
+1<
+19
+18
+17
+#100000
+0$
+0^
+0_
+1T
+#110000
+1$
+1^
+1_
+0T
+1L!
+1C!
+0,!
+1w
+1r
+1k
+0b
+1[
+0-!
+1)!
+1}
+1y
+1\
+0.!
+0i
+#120000
+0$
+0^
+0_
+1T
+#130000
+1$
+1^
+1_
+0T
+1D!
+0/!
+1s
+1G!
+0I!
+0H!
+1l
+0j
+0f
+1.
+0Q
+1L
+15
+12
+11
+10
+1m
+0g
+#140000
+0$
+0^
+0_
+1T
+#150000
+1$
+1^
+1_
+0T
+1J!
+0L!
+0K!
+0C!
+0x
+1t
+0r
+1h
+0[
+0E!
+1*!
+0}
+0y
+1-!
+0`
+1.!
+#160000
+0$
+0^
+0_
+1T
+#170000
+1$
+1^
+1_
+0T
+0F!
+0D!
+1/!
+1+!
+1u
+0-
+0.
+1Q
+1S
+1,
+1K
+05
+02
+01
+00
+0<
+09
+08
+07
+#180000
+0$
+0^
+0_
+1T
+#190000
+1$
+1^
+1_
+0T
+#200000
+0$
+0^
+0_
+1T
+#210000
+1$
+1^
+1_
+0T
+#220000
+0$
+0^
+0_
+1T
+#230000
+1$
+1^
+1_
+0T
+#240000
+0$
+0^
+0_
+1T
+#250000
+1$
+1^
+1_
+0T
+#260000
+0$
+0^
+0_
+1T
+#270000
+1$
+1^
+1_
+0T
+#280000
+0$
+0^
+0_
+1T
+#290000
+1$
+1^
+1_
+0T
+#300000
+0$
+0^
+0_
+1T
+#310000
+1$
+1^
+1_
+0T
+#320000
+0$
+0^
+0_
+1T
+#330000
+1$
+1^
+1_
+0T
+#340000
+0$
+0^
+0_
+1T
+#350000
+1$
+1^
+1_
+0T
+#360000
+0$
+0^
+0_
+1T
+#370000
+1$
+1^
+1_
+0T
+#380000
+0$
+0^
+0_
+1T
+#390000
+1$
+1^
+1_
+0T
+#400000
+0$
+0^
+0_
+1T
+#410000
+1$
+1^
+1_
+0T
+#420000
+0$
+0^
+0_
+1T
+#430000
+1$
+1^
+1_
+0T
+#440000
+0$
+0^
+0_
+1T
+#450000
+1$
+1^
+1_
+0T
+#460000
+0$
+0^
+0_
+1T
+#470000
+1$
+1^
+1_
+0T
+#480000
+0$
+0^
+0_
+1T
+#490000
+1$
+1^
+1_
+0T
+#500000
+0$
+0^
+0_
+1T
+#510000
+1$
+1^
+1_
+0T
+#520000
+0$
+0^
+0_
+1T
+#530000
+1$
+1^
+1_
+0T
+#540000
+0$
+0^
+0_
+1T
+#550000
+1$
+1^
+1_
+0T
+#560000
+0$
+0^
+0_
+1T
+#570000
+1$
+1^
+1_
+0T
+#580000
+0$
+0^
+0_
+1T
+#590000
+1$
+1^
+1_
+0T
+#600000
+0$
+0^
+0_
+1T
+#610000
+1$
+1^
+1_
+0T
+#620000
+0$
+0^
+0_
+1T
+#630000
+1$
+1^
+1_
+0T
+#640000
+0$
+0^
+0_
+1T
+#650000
+1$
+1^
+1_
+0T
+#660000
+0$
+0^
+0_
+1T
+#670000
+1$
+1^
+1_
+0T
+#680000
+0$
+0^
+0_
+1T
+#690000
+1$
+1^
+1_
+0T
+#700000
+0$
+0^
+0_
+1T
+#710000
+1$
+1^
+1_
+0T
+#720000
+0$
+0^
+0_
+1T
+#730000
+1$
+1^
+1_
+0T
+#740000
+0$
+0^
+0_
+1T
+#750000
+1$
+1^
+1_
+0T
+#760000
+0$
+0^
+0_
+1T
+#770000
+1$
+1^
+1_
+0T
+#780000
+0$
+0^
+0_
+1T
+#790000
+1$
+1^
+1_
+0T
+#800000
+0$
+0^
+0_
+1T
+#810000
+1$
+1^
+1_
+0T
+#820000
+0$
+0^
+0_
+1T
+#830000
+1$
+1^
+1_
+0T
+#840000
+0$
+0^
+0_
+1T
+#850000
+1$
+1^
+1_
+0T
+#860000
+0$
+0^
+0_
+1T
+#870000
+1$
+1^
+1_
+0T
+#880000
+0$
+0^
+0_
+1T
+#890000
+1$
+1^
+1_
+0T
+#900000
+0$
+0^
+0_
+1T
+#910000
+1$
+1^
+1_
+0T
+#920000
+0$
+0^
+0_
+1T
+#930000
+1$
+1^
+1_
+0T
+#940000
+0$
+0^
+0_
+1T
+#950000
+1$
+1^
+1_
+0T
+#960000
+0$
+0^
+0_
+1T
+#970000
+1$
+1^
+1_
+0T
+#980000
+0$
+0^
+0_
+1T
+#990000
+1$
+1^
+1_
+0T
+#1000000
